@@ -14,61 +14,105 @@
 #define BT3     BT_SEL 3
 #define BT4     BT_SEL 4
 
+
+
 / {
+    macros {
+        caps_macro: caps_macro {
+            compatible = "zmk,behavior-macro";
+            label = "caps_macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <200>;
+            bindings = <&kp CAPS>;
+        };
+    };
+
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            require-prior-idle-ms = <125>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        td_caps: tap_dance_caps {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHIFT>, <&caps_macro>;
+        };
+
+        hl: homerow_layertap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            require-prior-idle-ms = <125>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
+
+        ht: hold_tap {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             display-name = "Base";
             bindings = <
 &kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                          &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                           &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                           &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LBKT     &kp RBKT   &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp LALT  &kp LGUI  &mo 1   &kp ENTER    &kp SPACE  &mo 2   &kp BSPC  &kp RGUI
+&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                           &kp Y   &kp U     &kp I      &kp O    &kp P     &kp BSLH
+&kp GRAVE  &kp A   &hm LCTRL S   &hm LALT D     &hm LGUI F     &hl 2 G         &kp H   &hm RGUI J     &hm RALT K      &hm RCTRL L    &kp SEMI  &kp SQT
+&td_caps  &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LC(LEFT)     &kp RC(RIGHT)   &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                           &kp GLOBE  &lt 2 TAB  &ht LSHIFT SPACE   &lt 1 ENTER    &lt 1 ENTER  &ht RSHIFT SPACE   &lt 2 BSPC  &mo 3
             >;
         };
 
         lower_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //                     |      |      |      |        |  |       |      |       |       |
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans           &trans    &trans    &trans
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
-                                        &trans        &trans        &trans        &trans    &trans  &trans     &trans     &trans
+ &trans     &trans     &trans           &trans    &trans    &trans                                                      &trans     &trans     &trans           &trans    &trans    &trans
+&trans             &kp EXCL       &kp AT         &kp POUND      &kp DOLLAR     &kp PERCENT                              &kp CARET  &kp AMPS  &kp STAR   &kp LPAR          &kp RPAR   &kp PIPE
+&kp TILDE          &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                                   &kp LBKT   &kp RBKT  &kp LT     &kp GREATER_THAN  &kp COLON  &kp DQT
+&trans             &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         &kp LC(UP)  &kp LC(DOWN)  &kp LBRC   &kp RBRC  &kp COMMA  &kp DOT           &kp QMARK  &trans
+                                                 &trans         &trans         &trans         &trans      &trans        &trans     &trans    &trans
             >;
         };
 
         raise_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-            //                     |      |      |      |        |  |       |      |       |       |
-
-            display-name = "Raise";
+            display-name = " Raise";
             bindings = <
-&trans     &trans  &trans  &trans   &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
-&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                           &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
+&trans  &trans     &trans     &trans     &kp LG(LS(N4))  &kp LG(LS(N5))                    &trans     &trans      &trans    &kp C_BRI_DN  &kp C_BRI_UP   &kp C_VOL_UP
+&trans  &kp LG(Q)  &kp LG(W)  &trans     &trans          &trans                            &kp PG_UP  &kp PG_DN   &kp HOME  &kp END       &kp LG(LS(P))  &kp C_VOL_DN
+&trans  &kp LG(A)  &kp LG(S)  &trans     &kp LG(F)       &trans                            &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT     &kp UP         &trans
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(LS(V))   &kp LG(B)       &trans  &trans    &trans &trans  &trans    &kp LEFT      &kp DOWN       &kp RIGHT
+                              &trans     &trans          &trans          &trans  &trans    &trans     &trans     &trans
+            >;
+        };
+
+        bt_layer {
+            display-name = "BLE";
+            bindings = <
+&bt BT0      &bt BT1     &bt BT2  &bt BT3  &bt BT4  &none                           &bt BT0  &bt BT1  &bt BT2  &bt BT3   &bt BT4     &none
+&bootloader  &sys_reset  &none    &none    &none    &none                           &none    &none    &none    &none     &sys_reset  &bootloader
+&none        &none       &none    &none    &none    &none                           &none    &none    &none    &none     &kp UP      &none
+&none        &none       &none    &none    &none    &none   &bt BT_CLR  &bt BT_CLR  &none    &none    &none    &kp LEFT  &kp DOWN    &kp RIGHT
+                                  &none    &none    &trans  &trans      &trans      &trans   &none    &none
             >;
         };
     };
