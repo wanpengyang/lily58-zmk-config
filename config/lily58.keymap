@@ -14,8 +14,6 @@
 #define BT3     BT_SEL 3
 #define BT4     BT_SEL 4
 
-
-
 / {
     macros {
         caps_macro: caps_macro {
@@ -67,52 +65,94 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <38 37>;
+        };
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <38 39>;
+        };
+
+        paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <39 40>;
+        };
+
+        clipboard_history {
+            bindings = <&kp LG(LA(V))>;
+            key-positions = <40 41>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <45 46>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <46 47>;
+        };
+
+        underscore {
+            bindings = <&kp UNDER>;
+            key-positions = <19 20>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <20 21>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                          &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                           &kp Y   &kp U     &kp I      &kp O    &kp P     &kp BSLH
-&kp GRAVE  &kp A   &hm LCTRL S   &hm LALT D     &hm LGUI F     &hl 2 G         &kp H   &hm RGUI J     &hm RALT K      &hm RCTRL L    &kp SEMI  &kp SQT
-&td_caps  &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LC(LEFT)     &kp RC(RIGHT)   &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp GLOBE  &lt 2 TAB  &ht LSHIFT SPACE   &lt 1 ENTER    &lt 1 ENTER  &ht RSHIFT SPACE   &lt 2 BSPC  &mo 3
+&kp ESC    &kp N1  &kp N2       &kp N3      &kp N4      &kp N5                                           &kp N6            &kp N7      &kp N8      &kp N9       &kp N0    &kp GRAVE
+&kp TAB    &kp Q   &kp W        &kp E       &kp R       &kp T                                            &kp Y             &kp U       &kp I       &kp O        &kp P     &kp BSLH
+&kp GRAVE  &kp A   &hm LCTRL S  &hm LALT D  &hm LGUI F  &hl 2 G                                          &kp H             &hm RGUI J  &hm RALT K  &hm RCTRL L  &kp SEMI  &kp SQT
+&td_caps   &kp Z   &kp X        &kp C       &kp V       &kp B             &kp LC(LEFT)    &kp RC(RIGHT)  &kp N             &kp M       &kp COMMA   &kp DOT      &kp FSLH  &kp RSHFT
+                                &kp GLOBE   &lt 2 TAB   &ht LSHIFT SPACE  &lt 1 ENTER     &lt 1 ENTER    &ht RSHIFT SPACE  &lt 2 BSPC  &mo 3
             >;
         };
 
         lower_layer {
-
             display-name = "Lower";
             bindings = <
- &trans     &trans     &trans           &trans    &trans    &trans                                                      &trans     &trans     &trans           &trans    &trans    &trans
-&trans             &kp EXCL       &kp AT         &kp POUND      &kp DOLLAR     &kp PERCENT                              &kp CARET  &kp AMPS  &kp STAR   &kp LPAR          &kp RPAR   &kp PIPE
-&kp TILDE          &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                                   &kp LBKT   &kp RBKT  &kp LT     &kp GREATER_THAN  &kp COLON  &kp DQT
-&trans             &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         &kp LC(UP)  &kp LC(DOWN)  &kp LBRC   &kp RBRC  &kp COMMA  &kp DOT           &kp QMARK  &trans
-                                                 &trans         &trans         &trans         &trans      &trans        &trans     &trans    &trans
+&trans     &trans    &trans  &trans     &trans      &trans                                   &trans     &trans    &trans     &trans            &trans     &trans
+&trans     &kp EXCL  &kp AT  &kp POUND  &kp DOLLAR  &kp PERCENT                              &kp CARET  &kp AMPS  &kp STAR   &kp LPAR          &kp RPAR   &kp PIPE
+&kp TILDE  &kp N1    &kp N2  &kp N3     &kp N4      &kp N5                                   &kp LBKT   &kp RBKT  &kp LT     &kp GREATER_THAN  &kp COLON  &kp DQT
+&trans     &kp N6    &kp N7  &kp N8     &kp N9      &kp N0       &kp LC(UP)    &kp LC(DOWN)  &kp LBRC   &kp RBRC  &kp COMMA  &kp DOT           &kp QMARK  &trans
+                             &trans     &trans      &trans       &trans        &trans        &trans     &trans    &trans
             >;
         };
 
         raise_layer {
             display-name = " Raise";
             bindings = <
-&trans  &trans     &trans     &trans     &kp LG(LS(N4))  &kp LG(LS(N5))                    &trans     &trans      &trans    &kp C_BRI_DN  &kp C_BRI_UP   &kp C_VOL_UP
-&trans  &kp LG(Q)  &kp LG(W)  &trans     &trans          &trans                            &kp PG_UP  &kp PG_DN   &kp HOME  &kp END       &kp LG(LS(P))  &kp C_VOL_DN
-&trans  &kp LG(A)  &kp LG(S)  &trans     &kp LG(F)       &trans                            &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT     &kp UP         &trans
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(LS(V))   &kp LG(B)       &trans  &trans    &trans &trans  &trans    &kp LEFT      &kp DOWN       &kp RIGHT
-                              &trans     &trans          &trans          &trans  &trans    &trans     &trans     &trans
+&trans  &trans     &trans     &trans     &kp LG(LS(N4))  &kp LG(LS(N5))                    &trans     &trans     &trans    &kp C_BRI_DN  &kp C_BRI_UP   &kp C_VOL_UP
+&trans  &kp LG(Q)  &kp LG(W)  &trans     &trans          &trans                            &kp PG_UP  &kp PG_DN  &kp HOME  &kp END       &kp LG(LS(P))  &kp C_VOL_DN
+&trans  &kp LG(A)  &kp LG(S)  &trans     &kp LG(F)       &trans                            &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT     &kp UP         &trans
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(LS(V))   &kp LG(B)       &trans    &trans  &trans     &trans     &trans    &kp LEFT      &kp DOWN       &kp RIGHT
+                              &trans     &trans          &trans          &trans    &trans  &trans     &trans     &trans
             >;
         };
 
         bt_layer {
             display-name = "BLE";
             bindings = <
-&bt BT0      &bt BT1     &bt BT2  &bt BT3  &bt BT4  &none                           &bt BT0  &bt BT1  &bt BT2  &bt BT3   &bt BT4     &none
-&bootloader  &sys_reset  &none    &none    &none    &none                           &none    &none    &none    &none     &sys_reset  &bootloader
-&none        &none       &none    &none    &none    &none                           &none    &none    &none    &none     &kp UP      &none
-&none        &none       &none    &none    &none    &none   &bt BT_CLR  &bt BT_CLR  &none    &none    &none    &kp LEFT  &kp DOWN    &kp RIGHT
-                                  &none    &none    &trans  &trans      &trans      &trans   &none    &none
+&bt BT0      &bt BT1     &bt BT2  &bt BT3  &bt BT4  &none                             &bt BT0  &bt BT1  &bt BT2  &bt BT3   &bt BT4     &none
+&bootloader  &sys_reset  &none    &none    &none    &none                             &none    &none    &none    &none     &sys_reset  &bootloader
+&none        &none       &none    &none    &none    &none                             &none    &none    &none    &none     &kp UP      &none
+&none        &none       &none    &none    &none    &none   &bt BT_CLR    &bt BT_CLR  &none    &none    &none    &kp LEFT  &kp DOWN    &kp RIGHT
+                                  &none    &none    &trans  &trans        &trans      &trans   &none    &none
             >;
         };
     };
