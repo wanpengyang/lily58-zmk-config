@@ -112,6 +112,26 @@
             bindings = <&kp RG(RA(SPACE))>;
             key-positions = <31 32 33>;
         };
+
+        Quit {
+            bindings = <&kp LG(Q)>;
+            key-positions = <14 15>;
+        };
+
+        Close {
+            bindings = <&kp LG(W)>;
+            key-positions = <15 16>;
+        };
+
+        screenshot {
+            bindings = <&kp LS(LG(NUMBER_4))>;
+            key-positions = <3 4>;
+        };
+
+        screenrecord {
+            bindings = <&kp LS(LG(N5))>;
+            key-positions = <4 5>;
+        };
     };
 
     keymap {
