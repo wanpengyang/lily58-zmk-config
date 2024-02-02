@@ -1,0 +1,265 @@
+layout: {qmk_keyboard: lily58_rotated}
+layers:
+  Base:
+  - ESC
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - BACKSPACE
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - \
+  - '`'
+  - A
+  - {t: S, h: LCTRL}
+  - {t: D, h: LALT}
+  - {t: F, h: LGUI}
+  - {t: G, h: ' Raise'}
+  - H
+  - {t: J, h: RGUI}
+  - {t: K, h: RALT}
+  - {t: L, h: RCTRL}
+  - ;
+  - ''''
+  - '&td_caps'
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - LC(LEFT)
+  - RC(RIGHT)
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: ENTER, h: RSHFT}
+  - LC(SPACE)
+  - {t: TAB, h: ' Raise'}
+  - {t: TAB, h: Lower}
+  - {t: ENTER, h: LSHIFT}
+  - {t: SPACE, h: RSHIFT}
+  - {t: SPACE, h: Lower}
+  - {t: DELETE, h: ' Raise'}
+  - BLE
+  Lower:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F11
+  - {t: ▽, type: trans}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - '|'
+  - '~'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '['
+  - ']'
+  - <
+  - '>'
+  - ':'
+  - '"'
+  - {t: ▽, type: trans}
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - LC(UP)
+  - LC(DOWN)
+  - '{'
+  - '}'
+  - ','
+  - .
+  - '?'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  ' Raise':
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LG(LS(4))
+  - LG(LS(5))
+  - LA(LC(LG(LEFT)))
+  - LA(LC(LG(RIGHT)))
+  - {t: ▽, type: trans}
+  - BRI DN
+  - BRI UP
+  - VOL UP
+  - {t: ▽, type: trans}
+  - LG(Q)
+  - LG(W)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - PG DN
+  - PAGE UP
+  - END
+  - LG(LS(P))
+  - VOL DN
+  - {t: ▽, type: trans}
+  - LG(A)
+  - LG(S)
+  - {t: ▽, type: trans}
+  - LG(F)
+  - {type: held}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - UP
+  - MUTE
+  - {t: ▽, type: trans}
+  - LG(Z)
+  - LG(X)
+  - LG(C)
+  - LG(LS(V))
+  - LG(B)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LA(LC(LEFT))
+  - LA(LC(ENTER))
+  - RA(RC(RIGHT))
+  - LEFT
+  - DOWN
+  - RIGHT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  BLE:
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - ''
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - ''
+  - '&bootloader'
+  - '&sys_reset'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&sys_reset'
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - UP
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT CLR
+  - BT CLR
+  - ''
+  - ''
+  - ''
+  - LEFT
+  - DOWN
+  - RIGHT
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - {type: held}
+combos:
+- p: [38, 37]
+  k: LG(X)
+- p: [38, 39]
+  k: LG(C)
+- p: [39, 40]
+  k: LG(V)
+- p: [40, 41]
+  k: LG(LA(V))
+- p: [45, 46]
+  k: '-'
+- p: [46, 47]
+  k: '='
+- p: [19, 20]
+  k: _
+- p: [20, 21]
+  k: +
+- p: [31, 32, 33]
+  k: RG(RA(SPACE))
+- p: [14, 15]
+  k: LG(Q)
+- p: [15, 16]
+  k: LG(W)
+- p: [3, 4]
+  k: LS(LG(4))
+- p: [4, 5]
+  k: LS(LG(5))
