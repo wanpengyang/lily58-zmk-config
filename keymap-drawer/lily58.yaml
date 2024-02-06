@@ -52,7 +52,7 @@ layers:
   - /
   - {t: ENTER, h: RSHFT}
   - LC(SPACE)
-  - {t: TAB, h: ' Raise'}
+  - {t: LS(TAB), h: ' Raise'}
   - {t: TAB, h: Lower}
   - {t: ENTER, h: LSHIFT}
   - {t: SPACE, h: RSHIFT}
@@ -161,8 +161,8 @@ layers:
   - LG(C)
   - LG(LS(V))
   - LG(B)
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LG(Q)
+  - LG(W)
   - LA(LC(LEFT))
   - LA(LC(ENTER))
   - RA(RC(RIGHT))
@@ -255,10 +255,6 @@ combos:
   k: +
 - p: [31, 32, 33]
   k: RG(RA(SPACE))
-- p: [14, 15]
-  k: LG(Q)
-- p: [15, 16]
-  k: LG(W)
 - p: [3, 4]
   k: LS(LG(4))
 - p: [4, 5]
