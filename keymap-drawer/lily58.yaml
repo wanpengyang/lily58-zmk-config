@@ -56,7 +56,7 @@ layers:
   - {t: TAB, h: Lower}
   - {t: ENTER, h: LSHIFT}
   - {t: SPACE, h: RSHIFT}
-  - {t: SPACE, h: Lower}
+  - {t: LG(RIGHT), h: Lower}
   - {t: DELETE, h: ' Raise'}
   - BLE
   Lower:
