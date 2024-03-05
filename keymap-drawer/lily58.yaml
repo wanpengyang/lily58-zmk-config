@@ -132,22 +132,22 @@ layers:
   - BRI UP
   - VOL UP
   - {t: ▽, type: trans}
-  - LG(Q)
-  - LG(W)
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LG(LC(LA(LEFT)))
+  - LC(TAB)
+  - LA(LC(LG(RIGHT)))
   - {t: ▽, type: trans}
   - HOME
   - PG DN
   - PAGE UP
   - END
-  - LG(LS(P))
+  - {t: ▽, type: trans}
   - VOL DN
   - {t: ▽, type: trans}
-  - LG(A)
-  - LG(S)
   - {t: ▽, type: trans}
-  - LG(F)
+  - LA(LC(LEFT))
+  - LC(LA(ENTER))
+  - LA(LC(RIGHT))
   - {type: held}
   - LEFT
   - DOWN
@@ -156,11 +156,11 @@ layers:
   - UP
   - MUTE
   - {t: ▽, type: trans}
-  - LG(Z)
-  - LG(X)
-  - LG(C)
-  - LG(LS(V))
-  - LG(B)
+  - {t: ▽, type: trans}
+  - LA(LC(LG(X)))
+  - LS(LC(TAB))
+  - LA(LC(LG(V)))
+  - {t: ▽, type: trans}
   - LG(LA(LC(LEFT ARROW)))
   - LG(LA(LC(RIGHT)))
   - LA(LC(LEFT))
