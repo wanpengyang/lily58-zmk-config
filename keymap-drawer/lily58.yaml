@@ -52,7 +52,7 @@ layers:
   - /
   - {t: ENTER, h: RSHFT}
   - LC(SPACE)
-  - {t: LS(TAB), h: ' Raise'}
+  - {t: LG(B), h: ' Raise'}
   - {t: TAB, h: Lower}
   - {t: ENTER, h: LSHIFT}
   - {t: SPACE, h: RSHIFT}
