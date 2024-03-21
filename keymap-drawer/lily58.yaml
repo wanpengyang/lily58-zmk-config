@@ -31,7 +31,7 @@ layers:
   - {t: D, h: LALT}
   - {t: F, h: LGUI}
   - {t: G, h: ' Raise'}
-  - H
+  - {t: H, h: ' Raise'}
   - {t: J, h: RGUI}
   - {t: K, h: RALT}
   - {t: L, h: RCTRL}
