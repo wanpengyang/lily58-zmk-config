@@ -122,6 +122,16 @@
             bindings = <&kp LS(LG(N5))>;
             key-positions = <4 5>;
         };
+
+        left_bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <30 31>;
+        };
+
+        right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <44 45>;
+        };
     };
 
     keymap {
