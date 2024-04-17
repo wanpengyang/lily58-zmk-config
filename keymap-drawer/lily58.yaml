@@ -43,20 +43,20 @@ layers:
   - C
   - V
   - B
-  - LC(LEFT)
-  - RC(RIGHT)
+  - Ctl+ LEFT
+  - Ctl+ RIGHT
   - N
   - M
   - ','
   - .
   - /
   - {t: ENTER, h: RSHFT}
-  - LC(SPACE)
-  - {t: LG(B), h: ' Raise'}
+  - Ctl+ SPACE
+  - {t: Gui+ B, h: ' Raise'}
   - {t: TAB, h: Lower}
   - {t: ENTER, h: LSHIFT}
   - {t: SPACE, h: RSHIFT}
-  - {t: LG(RIGHT), h: Lower}
+  - {t: Gui+ RIGHT, h: Lower}
   - {t: DELETE, h: ' Raise'}
   - BLE
   Lower:
@@ -102,8 +102,8 @@ layers:
   - '8'
   - '9'
   - '0'
-  - LC(UP)
-  - LC(DOWN)
+  - Ctl+ UP
+  - Ctl+ DOWN
   - '{'
   - '}'
   - ','
@@ -123,8 +123,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LG(LS(4))
-  - LG(LS(5))
+  - Gui+Sft+ 4
+  - Gui+Sft+ 5
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -133,9 +133,9 @@ layers:
   - VOL UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LG(LC(LA(LEFT)))
-  - LC(TAB)
-  - LA(LC(LG(RIGHT)))
+  - Gui+Ctl+Alt+ LEFT
+  - Ctl+ TAB
+  - Alt+Ctl+Gui+ RIGHT
   - {t: ▽, type: trans}
   - HOME
   - PG DN
@@ -145,9 +145,9 @@ layers:
   - VOL DN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LA(LC(LEFT))
-  - LC(LA(ENTER))
-  - LA(LC(RIGHT))
+  - Alt+Ctl+ LEFT
+  - Ctl+Alt+ ENTER
+  - Alt+Ctl+ RIGHT
   - {type: held}
   - LEFT
   - DOWN
@@ -157,15 +157,15 @@ layers:
   - MUTE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LA(LC(LG(X)))
-  - LS(LC(TAB))
-  - LA(LC(LG(V)))
+  - Alt+Ctl+Gui+ X
+  - Sft+Ctl+ TAB
+  - Alt+Ctl+Gui+ V
   - {t: ▽, type: trans}
-  - LG(LA(LC(LEFT ARROW)))
-  - LG(LA(LC(RIGHT)))
-  - LA(LC(LEFT))
-  - LA(LC(ENTER))
-  - RA(RC(RIGHT))
+  - Gui+Alt+Ctl+ LEFT ARROW
+  - Gui+Alt+Ctl+ RIGHT
+  - Alt+Ctl+ LEFT
+  - Alt+Ctl+ ENTER
+  - AGr+Ctl+ RIGHT
   - LEFT
   - DOWN
   - RIGHT
@@ -238,13 +238,13 @@ layers:
   - {type: held}
 combos:
 - p: [38, 37]
-  k: LG(X)
+  k: Gui+ X
 - p: [38, 39]
-  k: LG(C)
+  k: Gui+ C
 - p: [39, 40]
-  k: LG(V)
+  k: Gui+ V
 - p: [40, 41]
-  k: LG(LA(V))
+  k: Gui+Alt+ V
 - p: [45, 46]
   k: '-'
 - p: [46, 47]
@@ -254,16 +254,16 @@ combos:
 - p: [20, 21]
   k: +
 - p: [31, 32, 33]
-  k: RG(RA(SPACE))
+  k: Gui+AGr+ SPACE
 - p: [3, 4]
-  k: LS(LG(4))
+  k: Sft+Gui+ 4
 - p: [4, 5]
-  k: LS(LG(5))
+  k: Sft+Gui+ 5
 - p: [30, 31]
   k: '['
 - p: [44, 45]
   k: ']'
-- p: [33, 34]
+- p: [18, 19]
   k: '{'
-- p: [47, 48]
+- p: [6, 7]
   k: '}'
