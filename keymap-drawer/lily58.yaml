@@ -51,7 +51,7 @@ layers:
   - .
   - /
   - {t: ENTER, h: RSHFT}
-  - Ctl+ SPACE
+  - GLOBE
   - {t: Gui+ B, h: ' Raise'}
   - {t: TAB, h: Lower}
   - {t: ENTER, h: LSHIFT}
