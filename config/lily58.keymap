@@ -135,12 +135,12 @@
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <33 34>;
+            key-positions = <18 19>;
         };
 
         right_brace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <47 48>;
+            key-positions = <6 7>;
         };
     };
 
