@@ -51,7 +51,7 @@ layers:
   - .
   - /
   - {t: ENTER, h: RSHFT}
-  - AC NEXT KEYBOARD LAYOUT SELECT
+  - CAPSLOCK
   - {t: Gui+ B, h: ' Raise'}
   - {t: TAB, h: Lower}
   - {t: ENTER, h: LSHIFT}
