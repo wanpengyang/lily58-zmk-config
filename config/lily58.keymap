@@ -142,6 +142,16 @@
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <6 7>;
         };
+
+        Left_Brace_2 {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <31 32>;
+        };
+
+        Right_Brace_2 {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <32 33>;
+        };
     };
 
     keymap {
