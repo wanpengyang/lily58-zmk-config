@@ -57,7 +57,7 @@ layers:
   - {t: ENTER, h: LSHIFT}
   - {t: SPACE, h: RSHIFT}
   - {t: Gui+ RIGHT, h: Lower}
-  - {t: DELETE, h: ' Raise'}
+  - {t: Alt+Gui+ B, h: ' Raise'}
   - BLE
   Lower:
   - {t: ▽, type: trans}
