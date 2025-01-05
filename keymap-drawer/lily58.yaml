@@ -263,8 +263,8 @@ layers:
   - {t: ▽, type: trans}
   - SPACE
   - UP
-  - <
-  - '>'
+  - ','
+  - .
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
