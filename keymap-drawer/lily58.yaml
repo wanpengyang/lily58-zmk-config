@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: lily58_rotated}
+layout: {zmk_keyboard: lily58}
 layers:
   Base:
   - ESC
@@ -43,21 +43,21 @@ layers:
   - C
   - V
   - B
-  - Ctl+ LEFT
-  - Ctl+ RIGHT
+  - Ctl+LEFT
+  - Ctl+RIGHT
   - N
   - M
   - ','
   - .
   - /
-  - {t: ENTER, h: RSHFT}
+  - {t: AltGr+Ctl+Gui+I, h: RSHFT}
   - {t: CAPSLOCK, h: '4'}
-  - {t: Gui+ B, h: ' Raise'}
+  - {t: Gui+B, h: ' Raise'}
   - {t: TAB, h: Lower}
   - {t: ENTER, h: LSHIFT}
   - {t: SPACE, h: RSHIFT}
   - {t: TAB, h: Lower}
-  - {t: Alt+Gui+ B, h: ' Raise'}
+  - {t: Alt+Gui+B, h: ' Raise'}
   - BLE
   Lower:
   - {t: ▽, type: trans}
@@ -102,8 +102,8 @@ layers:
   - '8'
   - '9'
   - '0'
-  - Ctl+ UP
-  - Ctl+ DOWN
+  - Ctl+UP
+  - Ctl+DOWN
   - '{'
   - '}'
   - ','
@@ -123,8 +123,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Gui+Sft+ 4
-  - Gui+Sft+ 5
+  - Gui+Sft+4
+  - Gui+Sft+5
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -133,9 +133,9 @@ layers:
   - VOL UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Gui+Ctl+Alt+ LEFT
-  - Ctl+ TAB
-  - Alt+Ctl+Gui+ RIGHT
+  - Gui+Ctl+Alt+LEFT
+  - Ctl+TAB
+  - Alt+Ctl+Gui+RIGHT
   - {t: ▽, type: trans}
   - HOME
   - PG DN
@@ -145,9 +145,9 @@ layers:
   - VOL DN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Alt+Ctl+ LEFT
-  - Ctl+Alt+ ENTER
-  - Alt+Ctl+ RIGHT
+  - Alt+Ctl+LEFT
+  - Ctl+Alt+ENTER
+  - Alt+Ctl+RIGHT
   - {type: held}
   - LEFT
   - DOWN
@@ -157,15 +157,15 @@ layers:
   - MUTE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Alt+Ctl+Gui+ X
-  - Sft+Ctl+ TAB
-  - Alt+Ctl+Gui+ V
+  - Alt+Ctl+Gui+X
+  - Sft+Ctl+TAB
+  - Alt+Ctl+Gui+V
   - {t: ▽, type: trans}
-  - Gui+Alt+Ctl+ LEFT ARROW
-  - Gui+Alt+Ctl+ RIGHT
-  - Alt+Ctl+ LEFT
-  - Alt+Ctl+ ENTER
-  - AGr+Ctl+ RIGHT
+  - Gui+Alt+Ctl+LEFT ARROW
+  - Gui+Alt+Ctl+RIGHT
+  - Alt+Ctl+LEFT
+  - Alt+Ctl+ENTER
+  - AltGr+Ctl+RIGHT
   - LEFT
   - DOWN
   - RIGHT
@@ -297,13 +297,13 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [38, 37]
-  k: Gui+ X
+  k: Gui+X
 - p: [38, 39]
-  k: Gui+ C
+  k: Gui+C
 - p: [39, 40]
-  k: Gui+ V
+  k: Gui+V
 - p: [40, 41]
-  k: Gui+Alt+ V
+  k: Gui+Alt+V
 - p: [45, 46]
   k: '-'
 - p: [46, 47]
@@ -313,11 +313,11 @@ combos:
 - p: [20, 21]
   k: +
 - p: [31, 32, 33]
-  k: Gui+AGr+ SPACE
+  k: Gui+AltGr+SPACE
 - p: [3, 4]
-  k: Sft+Gui+ 4
+  k: Sft+Gui+4
 - p: [4, 5]
-  k: Sft+Gui+ 5
+  k: Sft+Gui+5
 - p: [30, 31]
   k: '['
 - p: [44, 45]
