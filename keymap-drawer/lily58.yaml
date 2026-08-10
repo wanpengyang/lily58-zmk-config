@@ -30,8 +30,8 @@ layers:
   - {t: S, h: LCTRL}
   - {t: D, h: LALT}
   - {t: F, h: LGUI}
-  - {t: G, h: ' Raise'}
-  - {t: H, h: ' Raise'}
+  - {t: G, h: Lower}
+  - {t: H, h: Lower}
   - {t: J, h: RGUI}
   - {t: K, h: RALT}
   - {t: L, h: RCTRL}
@@ -52,25 +52,25 @@ layers:
   - /
   - {t: AltGr+Ctl+Gui+I, h: RSHFT}
   - {t: CAPSLOCK, h: '4'}
-  - {t: Gui+B, h: ' Raise'}
-  - {t: TAB, h: Lower}
+  - {t: Gui+B, h: Lower}
+  - {t: TAB, h: Upper}
   - {t: ENTER, h: LSHIFT}
   - {t: SPACE, h: RSHIFT}
-  - {t: TAB, h: Lower}
-  - {t: Alt+Gui+B, h: ' Raise'}
+  - {t: TAB, h: Upper}
+  - {t: Alt+Gui+B, h: Lower}
   - BLE
-  Lower:
+  Upper:
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - LCTRL
+  - '&'
+  - '*'
+  - (
+  - )
   - F11
   - {t: ▽, type: trans}
   - '!'
@@ -118,7 +118,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  ' Raise':
+  Lower:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
