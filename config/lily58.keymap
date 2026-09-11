@@ -186,7 +186,7 @@
 &trans  &trans  &kp LG(LC(LA(LEFT)))  &kp LC(TAB)        &kp LA(LC(LG(RIGHT)))  &trans                                                               &kp HOME          &kp PG_DN          &kp PAGE_UP        &kp END       &trans        &kp C_VOL_DN
 &trans  &trans  &kp LA(LC(LEFT))      &kp LC(LA(ENTER))  &kp LA(LC(RIGHT))      &trans                                                               &kp LEFT          &kp DOWN           &kp UP             &kp RIGHT     &kp UP        &kp C_MUTE
 &trans  &trans  &kp LA(LC(LG(X)))     &kp LS(LC(TAB))    &kp LA(LC(LG(V)))      &trans          &kp LG(LA(LC(LEFT_ARROW)))    &kp LG(LA(LC(RIGHT)))  &kp LA(LC(LEFT))  &kp LA(LC(ENTER))  &kp RA(RC(RIGHT))  &kp LEFT      &kp DOWN      &kp RIGHT
-                                      &trans             &trans                 &trans          &trans                        &trans                 &trans            &trans             &trans
+                                      &trans             &trans                 &trans          &kp MINUS                     &kp PLUS               &trans            &trans             &trans
             >;
         };
 
